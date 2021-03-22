@@ -94,9 +94,12 @@ class CityListTest {
     }
 
     @Test
-    void lab() {
+    void failingTest() {
         CityList cityList = mockCityList();
-        cityList.add(new City("Dubai","UAE"));
-        assertEquals(3,cityList.countCities());
+        assertEquals("Edmonton",cityList.getCities().get(0).getCityName());
+        assertEquals("Alberta",cityList.getCities().get(0).getProvinceName());
+
+        assertEquals("Dubai",cityList.getCities().get(0).getCityName());
+        assertEquals("UAE",cityList.getCities().get(0).getProvinceName());
     }
 }
